@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import User from './User';
 
-const proxyUrl = 'http://localhost:3010';
+const proxyUrl = 'https://proxy-user.herokuapp.com';
 
 class UserList extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class UserList extends Component {
   loadData = () => {
     this.setState({ fetching: true });
 
-    axios.get(proxyUrl + "/users")
+    axios.get(`${proxyUrl}/users`)
       .then((res) => {
         this.setState({ data: res.data, fetching: false });
       })

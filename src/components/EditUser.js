@@ -5,7 +5,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-const proxyUrl = 'http://localhost:3010';
+const proxyUrl = 'https://proxy-user.herokuapp.com';
 
 class EditUser extends Component {
   constructor(props) {

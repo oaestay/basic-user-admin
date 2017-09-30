@@ -5,7 +5,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-const proxyUrl = 'http://localhost:3010/users';
+const proxyUrl = 'https://proxy-user.herokuapp.com';
 
 class CreateUser extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class CreateUser extends Component {
   _handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(proxyUrl, {
+    axios.post(`${proxyUrl}/users`, {
       email: this.state.email,
       image: this.state.image,
     })
