@@ -5,6 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 
+import Home from './components/Home';
 import UserList from './components/UserList';
 import CreateUser from './components/CreateUser';
 import EditUser from './components/EditUser';
@@ -24,6 +25,7 @@ class App extends Component {
             </ul>
           </nav>
 
+          <Route exact path="/" component={ Home }></Route>
           <Route path="/users" component={ UserList }></Route>
           <Route path="/create-user" component={ CreateUser }></Route>
           <Route path="/edit-user/:userId" component={ EditUser }></Route>

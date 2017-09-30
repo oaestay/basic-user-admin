@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import User from './User';
 
+import './UserList.css';
+
 const proxyUrl = 'https://proxy-user.herokuapp.com';
 
 class UserList extends Component {
@@ -53,6 +55,7 @@ renderData() {
     return (
       <div className="UserList">
         <h1>Users</h1>
+        <div className="List"></div>
         {this.renderData()}
       </div>
     )

@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {
   Link,
-  Redirect,
 } from 'react-router-dom';
+
+import './User.css';
 
 const proxyUrl = 'https://proxy-user.herokuapp.com';
 
 class User extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  _handleDelete = () => {
+ _handleDelete = () => {
     axios.delete(`${proxyUrl}/users/${this.props.userId}`)
       .then((res) => {
         this.props.handleReload()
@@ -31,7 +28,7 @@ class User extends Component {
           </Link>
           <button onClick={this._handleDelete}><i className="fa fa-trash" aria-hidden="true"></i></button>
         </div>
-        <div className="UserImage"><img src={this.props.image} /></div>
+        <div className="UserImage"><img src={this.props.image} alt="user"/></div>
       </div>
     )
   }

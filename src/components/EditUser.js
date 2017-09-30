@@ -5,6 +5,8 @@ import {
   Redirect,
 } from 'react-router-dom';
 
+import './UserForm.css';
+
 const proxyUrl = 'https://proxy-user.herokuapp.com';
 
 class EditUser extends Component {
@@ -94,12 +96,14 @@ class EditUser extends Component {
             <label htmlFor="email">Email</label>
             <input type="text" value={this.state.email} name="email" id="email"
               onChange={(e)=>this._handleEmailChange(e)}/>
+          </div>
 
+          <div>
             <label htmlFor="image">Image</label>
             <input className="fileInput"
               type="file"
               onChange={(e)=>this._handleImageChange(e)} />
-            </div>
+          </div>
 
           <div>
             <button className="submitButton"

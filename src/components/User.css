@@ -1,3 +1,16 @@
-.User{
-  max-width: 100px;
+.User {
+  max-width: 150px;
+  padding: 15px;
+}
+
+.UserName {
+  padding: 10px;
+}
+
+.UserImage {
+  max-width: 100%;
+}
+
+.UserImage img {
+  max-width: 100%;
 }
